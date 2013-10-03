@@ -1,0 +1,102 @@
+strong Basic Inputs
+
+form.horizontal-fields
+  .field
+    label Text Input
+    input type="text" size="20" /
+    p.help-text This is some help text
+
+  .field
+    label Required Input <abbr title="required">*</abbr>
+    input type="text" size="20" required="" /
+
+  .field
+    label Disabled Input
+    input type="text" size="20" disabled="disabled" /
+
+  .field
+    label Email Input
+    input type="email" size="20" /
+
+  .field
+    label URL Input
+    input type="url" size="20" /
+
+  .field
+    label Number Input
+    input type="number" size="20" /
+    p.help-text This is some help text that's a bit longer than normal
+
+  .field
+    label Date Input
+    input type="date" size="20" /
+
+  .field
+    label Month Input
+    input type="month" size="20" /
+
+  .field
+    label Week Input
+    input type="week" size="20" /
+
+  .field
+    label Date/Time Input
+    input type="datetime" size="20" /
+
+  .field
+    label Date/Time Local Input
+    input type="datetime-local" size="20" /
+
+  .field
+    label Search Input
+    input type="search" size="20" /
+
+  .field
+    label Password Input
+    input type="password" size="20" /
+
+  .field
+    label Select
+    select
+      option Option 1
+      option Option 2
+      option Option 3
+
+  .field
+    label Textarea
+    textarea rows="5" cols="30"
+
+
+strong Checkboxes and Radio Buttons
+form.horizontal-fields 
+  .option-group
+    label Parent Label
+    ul
+      li.field
+        label for="checkbox-1" Yes
+        input type="checkbox" name="checkbox-group-1" id="checkbox-1" checked="checked" /
+        / span.custom-checkbox-input.checked
+      li.field
+        label for="checkbox-2" No
+        input type="checkbox" name="checkbox-group-1" id="checkbox-2" /
+        / span.custom-checkbox-input
+      li.field
+        label for="checkbox-3" No
+        input type="checkbox" name="checkbox-group-1" id="checkbox-3" /
+        / span.custom-checkbox-input
+      li.field
+        label for="checkbox-4" No
+        input type="checkbox" name="checkbox-group-1" id="checkbox-4" /
+        / span.custom-checkbox-input
+
+  .option-group
+    label Parent Label
+    ul
+      li.field
+        label for="radio-1" Yes
+        input type="radio" name="radio-group-1" id="radio-1" checked="checked" /
+        / span.custom-radio-input.checked
+      li.field
+        label for="radio-2" No
+        input type="radio" name="radio-group-1" id="radio-2" /
+        / span.custom-radio-input

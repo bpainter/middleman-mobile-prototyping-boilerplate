@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------
+// Buttons
+// ----------------------------------------------------------------
+.button {
+  height: $baseline*2;
+  line-height: $baseline;
+  padding: 0 $baseline/2;
+}
+.button-large {
+  height: $sub-baseline*7;
+  line-height: $sub-baseline*7;
+  padding: 0 $baseline;
+}
+.button-small {
+  height: $sub-baseline*4;
+  line-height: $baseline;
+  font-size: 80%;
+}
+
+.button-group {
+  margin-bottom: $sub-baseline;
+  .button,
+  .button-large,
+  .button-small {
+    margin: 0 $sub-baseline/2;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

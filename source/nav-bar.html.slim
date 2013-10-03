@@ -1,0 +1,31 @@
+---
+title: Nav Bar
+---
+
+- content_for :nav_bar do
+  nav.bar-tab
+    ul.tab-inner
+      li.tab-item.active
+        a href="#"
+          img.tab-icon src="img/icon-home.png"
+            .tab-label Label
+      li.tab-item
+        a href="#"
+          img.tab-icon src="img/icon-profile.png"
+            .tab-label Label
+      li.tab-item
+        a href="#"
+          img.tab-icon src="img/icon-messages.png"
+            .tab-label Label
+      li.tab-item
+        a href="#"
+          img.tab-icon src="img/icon-hamburger.png"
+            .tab-label Label
+      li.tab-item
+        a href="#"
+          img.tab-icon src="img/icon-settings.png"
+            .tab-label Label
+
+
+- content_for :left_title_button do
+  a.button-prev href="/" Previous

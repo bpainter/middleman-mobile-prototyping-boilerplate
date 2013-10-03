@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Tables
+// -----------------------------------------------------------------------------
+
+%table {
+  margin-bottom: $baseline;
+  th, td {
+    padding: $sub-baseline*2;
+    border-left: 1px solid #000;
+    &:first-child {
+      border-left: 0;
+    }
+  }
+  tr {
+    border-bottom: 1px solid #000;
+  }
+}
+
+.table-base {
+  @extend %table;
+}
+.table-striped {
+  @extend %table;
+  tr:nth-child(even) {
+    background-color: #ccc;
+  }
+}
+
+.table-hover {
+  @extend %table;
+  tbody {
+    tr:hover {
+      background-color: #efefef;
+    }
+    td:hover {
+      background-color: #ccc;
+    }  
+  }
+}
+
+.table-condensed {
+  @extend %table;
+  th, td {
+    padding: $sub-baseline;
+  }
+}

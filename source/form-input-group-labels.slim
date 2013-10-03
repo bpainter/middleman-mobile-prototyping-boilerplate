@@ -1,0 +1,22 @@
+---
+title: Form
+---
+
+form.content-padded
+  .input-group
+    .input-row
+      label Full Name
+      input placeholder="Full name" type="text"
+    .input-row
+      label Email
+      input placeholder="Email" type="email"
+    .input-row
+      label Website
+      input placeholder="Website" type="url"
+
+  a.button.button-block Choose existing
+
+
+
+- content_for :left_title_button do
+  a.button-prev href="/" Previous

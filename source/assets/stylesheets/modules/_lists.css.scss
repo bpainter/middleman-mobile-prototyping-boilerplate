@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------
+// Lists: ordered, unordered, and definition
+// ----------------------------------------------------------------
+
+// ----------------------------------------------------------------
+.list-inline {
+  li {
+    display: inline-block;
+    margin-left: $baseline;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.list-unstyled {
+  list-style: none;
+}
+
+dl {
+  dt {
+    font-weight: bold;
+
+  }
+  dd {
+    margin: 0 0 $sub-baseline 0;
+  } 
+  &.list-inline {
+    dt {
+      float: left;
+      width: 20%;
+    }
+    dd {
+      float: left;
+      width: 80%;
+    }
+  } 
+}

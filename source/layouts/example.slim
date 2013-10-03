@@ -1,0 +1,52 @@
+doctype html
+
+head
+  meta charset="utf-8"
+
+  / Use title if it's in the page YAML frontmatter
+  title #{current_page.data.title}
+  meta name="description" content="#{current_page.data.description}"/
+
+  / Prevents zooming
+  meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"
+
+  / Makes your prototype chrome-less once bookmarked to your phone's home screen
+  meta name="apple-mobile-web-app-capable" content="yes"
+  meta name="apple-mobile-web-app-status-bar-style" content="black"
+
+  / Set Apple icons for when prototype is saved to home screen
+  / link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icons/apple-touch-icon-114x114.png"
+  / link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icons/apple-touch-icon-72x72.png"
+  / link rel="apple-touch-icon-precomposed" sizes="57x57" href="touch-icons/apple-touch-icon-57x57.png"
+
+  == stylesheet_link_tag "themes/graybox/graybox", "scaffolds/scaffold"
+  == javascript_include_tag "libs/jquery", "libs/jpanelmenu", "global"
+  / == javascript_include_tag "libs/ratchet"
+
+body id="#{current_page.data.id}"
+
+  #panel
+    header.bar-title
+      - if current_page.data.menu == true
+        a.menu-trigger.button href="#" Menu
+      - else
+        == link_to "#{current_page.data.backText}", "#{current_page.data.backLink}", :class => 'button-prev'
+
+      h1.title #{current_page.data.title}
+
+      -if current_page.data.extra == true
+        == link_to "#{current_page.data.extraText}", "#{current_page.data.extraLink}", :class => 'button'
+
+    .content
+      == yield
+
+  nav#menu
+    .search
+      input type="search" placeholder="Search projects & tasks"
+      / a.button#cancel-search href="#" Cancel
+    ul.list
+      li== link_to 'My Tasks', '/'
+      li== link_to 'Projects', '/projects/'
+      li== link_to 'Logout', '/'
+
+  / == javascript_include_tag "libs/jquery", "modules", "base"

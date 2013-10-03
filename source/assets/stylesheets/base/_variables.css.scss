@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+// ----------------------------------------------------------------
+// Import Compass for CSS3 mixins & Susy for the grid system
+// ----------------------------------------------------------------
+@import 'compass';
+@import 'susy';
+
+// ----------------------------------------------------------------
+// Global variables
+// ----------------------------------------------------------------
+// Set to true if you want to add support for IE6 and IE7
+// Notice: setting to true might render some elements
+// slightly differently than when set to false
+$legacy-support-for-ie: false !default; // Used also in Compass
+$experimental-support-for-svg: true !default; // adds a base-64 svg for gradients in IE9
+
+// ----------------------------------------------------------------
+// Font Sizes
+// ----------------------------------------------------------------
+$golden-ratio: 1.618;
+$root-font-size: 62.5% !default;
+$base-font-size: 1rem !default;
+
+$h1-font-size: 2em !default;
+$h2-font-size: 1.5em !default;
+$h3-font-size: 1.17em !default;
+$h4-font-size: 1em !default;
+$h5-font-size: 0.83em !default;
+$h6-font-size: 0.75em !default;
+
+$h1-margin: 0.67em 0 !default;
+$h2-margin: 0.83em 0 !default;
+$h3-margin: 1em 0 !default;
+$h4-margin: 1.33em 0 !default;
+$h5-margin: 1.67em 0 !default;
+$h6-margin: 2.33em 0 !default;  
+
+// ----------------------------------------------------------------
+// Creates a baseline to help calculate a consistent 
+// rhythm vertical
+// ----------------------------------------------------------------
+$sub-baseline: 5px !default;
+$baseline: $sub-baseline*3 !default;
+
+// ----------------------------------------------------------------
+// Colors
+// ----------------------------------------------------------------
+$root-bg-color  : #fff !default;
+$text-color     : #000 !default;
+
+// ----------------------------------------------------------------
+// Font Families
+// ----------------------------------------------------------------
+$serif-font-family: "Times New Roman", Sans-serif !default;
+$sans-font-family: "Helvetica Neue", Helvetica;
+
+// ----------------------------------------------------------------
+// Susy Grid
+// ----------------------------------------------------------------
+$total-columns  : 16;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$show-grid      : false;

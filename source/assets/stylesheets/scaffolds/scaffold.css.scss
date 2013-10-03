@@ -1,0 +1,114 @@
+@import "compass";
+
+@import "base/variables";
+// @import "structure/mixins";
+body {
+  background-color: #666;
+}
+.no-content {
+  border: 1px solid #ccc;
+  color: #666;
+  display: none;
+  font-size: 2em;
+  line-height: 1.4;
+  margin: $baseline;
+  padding: $baseline;
+  text-align: center;
+  small {
+    display: block;
+    font-size: .5em;
+    margin-top: 12px;
+  }
+}
+
+input[type="search"] {
+  margin: $baseline;
+  width: 90%;
+}
+
+.tasks {
+  .date {
+    font-size: .8em;
+    float: right;
+    opacity: .5;
+    position: relative;
+      top: 3px;
+    &.today {
+      color: red;
+    }
+    &.late {
+      font-weight: bold;
+      color: red;
+    }
+    &.tomorrow {
+      color: darken(yellow, 30%);
+    }
+    &.complete {
+      color: green;
+    }
+  }
+}
+.task-notes {
+  border: 1px solid #efefef;
+  min-height: 200px;
+  margin: 6px;
+  padding: 6px;
+
+}
+
+.bar-title {
+  @include background(linear-gradient(#333, #333));
+  [class*="button"] {
+    @include background(linear-gradient(#333, #333));
+  }
+}
+
+// Individual Page Tweaks
+.content {
+  input[type="search"] {
+    margin-top: 60px;
+  }
+}
+
+.jPanelMenu {
+  .bar-title {
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+  .bar-standard {
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+  .content {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+#jPanelMenu-menu {
+  background-color: #666;
+  .list {
+    li {
+      background-color: #666;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    a {
+      color: #efefef;
+    }
+  }
+}
+
+.list {
+  li {
+    strong {
+      display: inline-block;
+      width: 120px;
+    }
+  }
+}

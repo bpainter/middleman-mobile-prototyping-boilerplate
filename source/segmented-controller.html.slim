@@ -1,0 +1,21 @@
+---
+title: Segmented Controller
+---
+
+ul.segmented-controller
+  li.active
+    a href="#item1" One
+  li
+    a href="#item2" Two
+  li
+    a href="#item3" Three
+
+ul.inset.list
+  li#item1.segmented-controller-item.active Item 1
+  li#item2.segmented-controller-item Item 2
+  li#item3.segmented-controller-item Item 3
+
+
+
+- content_for :left_title_button do
+  a.button-prev href="/" Previous
