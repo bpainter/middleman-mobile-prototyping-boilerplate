@@ -10,6 +10,7 @@
 // Theme CSS
 // ----------------------------------------------------
 @import "themes/graybox/variables";
+
 /**
  * ==================================
  * Ratchet v1.0.0
@@ -141,8 +142,8 @@ a {
   background: #fff;
   -webkit-transition-property: top, bottom;
           transition-property: top, bottom;
-  -webkit-transition-duration: .2s, .2s;
-          transition-duration: .2s, .2s;
+  -webkit-transition-duration: .2s, .2s;  
+          transition-duration: .2s, .2s;  
   -webkit-transition-timing-function: linear, linear;
           transition-timing-function: linear, linear;
   -webkit-overflow-scrolling: touch;
@@ -314,17 +315,17 @@ a {
 -------------------------------------------------- */
 
 /* Generic style for all buttons in .bar-title */
-.bar-title [class*="button"], #cancel-search {
+.bar-title [class*="button"] {
   position: relative;
   z-index: 10; /* Places buttons over full width title */
   font-size: 12px;
   line-height: 23px;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-  // background-color: #1eb0e9;
-  // background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
-  // background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
-  // border: 1px solid #0e5895;
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
+  border: 1px solid #0e5895;
   box-shadow: 0 1px rgba(255, 255, 255, .25);
   -webkit-box-flex: 0;
           box-flex: 0;
@@ -379,24 +380,23 @@ a {
   height: 27px;
   border-radius: 30px 100px 2px 40px / 2px 40px 30px 100px;
   content: '';
-  // box-shadow: inset 1px 0 #0e5895, inset 0 1px #0e5895;
-  box-shadow: inset 1px 0 #000, inset 0 1px #000;
+  box-shadow: inset 1px 0 #0e5895, inset 0 1px #0e5895;
   -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
                   mask-image: gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
 }
 .bar-title .button-prev:before {
   left: -5px;
-  // background-image: -webkit-gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
-  // background-image: gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
-  // border-left: 1.5px solid rgba(255, 255, 255, .25);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
+  background-image: gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
+  border-left: 1.5px solid rgba(255, 255, 255, .25);
   -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
           transform: rotate(-45deg) skew(-10deg, -10deg);
 }
 .bar-title .button-next:before {
   right: -5px;
-  // background-image: -webkit-gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
-  // background-image: gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
-  // border-top: 1.5px solid rgba(255, 255, 255, .25);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
+  background-image: gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
+  border-top: 1.5px solid rgba(255, 255, 255, .25);
   -webkit-transform: rotate(135deg) skew(-10deg, -10deg);
           transform: rotate(135deg) skew(-10deg, -10deg);
 }
@@ -407,7 +407,7 @@ a {
 .bar-title .button-prev:active:before,
 .bar-title .button-next:active:before {
   color: #fff;
-  // background-color: #0876b1;
+  background-color: #0876b1;
   background-image: none;
 }
 .bar-title .button-prev:active:before,
@@ -692,8 +692,7 @@ select {
 }
 
 /* Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input */
-.input-group input,
-.input-group textarea {
+.input-group input {
   margin-bottom: 0;
   background-color: transparent;
   border: 0;
@@ -730,8 +729,7 @@ select {
 }
 
 /* Actual inputs float to right of labels and also have a set percentage */
-.input-row label + input,
-.input-row label + textarea {
+.input-row label + input {
   float: right;
   width: 65%;
   padding-left: 0;
@@ -1172,7 +1170,7 @@ select {
 .slider > ul > li {
   display: inline-block;
   vertical-align: top; /* Ensure that li always aligns to top */
-  width: 100%;
+  width: 100%; 
   height: 100%;
 }
 
